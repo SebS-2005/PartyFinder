@@ -1,0 +1,32 @@
+
+
+.container.py-5 {
+    margin-top: 80px;
+  }
+  
+ 
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  
+  body {
+    padding-top: 60px; 
+    scroll-padding-top: 70px; 
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .container.py-5 {
+      margin-top: 65px; 
+    }
+  }
+  
+ 
+  main, section, div.formulario-reserva {
+    position: relative;
+    z-index: 1;
+  }
