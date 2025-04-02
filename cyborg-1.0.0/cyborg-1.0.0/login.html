@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+    <title>PartyFinder</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sing-in">
+            <form action="coneccion.php" method="post">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Recordarme</label>
+                </div>
+                <button type="submit" name="blogin" href="index.html">Login</button>
+                <div class="singup-link">
+                    <p>¿No tienes una cuenta? <a href="#" class="singupbtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-wrapper sing-up">
+            <form action="coneccion.php" method="post">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input name="username" type="text" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input name="email" type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input name="password" type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox" required> Acepto los términos y condiciones</label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" name="bsubmit">Save</button>
+                    <button type="reset" name="breset">Reset</button>
+                </div>
+                <div class="singup-link">
+                    <p>¿Ya tienes una cuenta? <a href="#" class="singinbtn-link">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
