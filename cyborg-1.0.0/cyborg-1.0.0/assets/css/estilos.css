@@ -8,15 +8,17 @@
 }
 
 body {
-    background: url(imagenes/fondo3.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
+    body {
+        background-image: url(../images/fondo3.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        padding-left: 100px;
+    }
 
 .wrapper {
     position: relative;
