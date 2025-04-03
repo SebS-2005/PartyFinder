@@ -24,14 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     document.querySelector('.sing-up form').addEventListener('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Evita la recarga de la página
         
         const username = this.username.value.trim();
         const email = this.email.value.trim();
         const password = this.password.value.trim();
 
+        if (!username || !email || !password) {
+            alert("⚠️ Todos los campos son obligatorios.");
+            return;
+        }
+
         if (users.some(user => user.username === username)) {
-            alert("⚠️ El usuario ya está registrado. Intenta con otro nombre.");
+            alert("⚠️ El usuario ya existe. Intenta con otro.");
             return;
         }
 
@@ -43,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelector('.sing-in form').addEventListener('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Evita la recarga de la página
         
         const username = this.username.value.trim();
         const password = this.password.value.trim();
@@ -52,10 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (user) {
             alert("✅ Inicio de sesión exitoso.");
-            window.location.href = "index.html"; // Redirige después del login
+            window.location.href = "index.html"; // Simula un inicio de sesión
         } else {
             alert("❌ Usuario o contraseña incorrectos.");
         }
     });
 });
-
